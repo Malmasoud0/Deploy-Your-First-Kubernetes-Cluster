@@ -1,0 +1,12 @@
+volumeMounts:
+        - name: htmlcontent
+          mountPath: "/usr/share/nginx/html/"
+          readOnly: true
+      volumes:
+      - name: htmlcontent
+        configMap:
+          name: index.html
+          items:
+          - key: index.html
+            path: index.html
+
